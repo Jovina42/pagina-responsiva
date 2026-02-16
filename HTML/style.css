@@ -1,0 +1,54 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f4f4f4;
+}
+
+h1 {
+  text-align: center;
+  margin: 15px 0;
+  font-size: 22px;
+}
+
+/* PADRÃO — CELULAR (até 479px) → 1 coluna */
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 8px;
+  padding: 10px;
+}
+
+.bloco {
+  background-color: #4b4d4b;
+  color: white;
+  padding: 12px;
+  text-align: center;
+  font-weight: bold;
+  border-radius: 6px;
+  font-size: 16px;
+}
+
+/* 480px → 2 colunas */
+@media (min-width: 480px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* 768px → 3 colunas */
+@media (min-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* 1280px → 6 colunas */
+@media (min-width: 1280px) {
+  .grid {
+    grid-template-columns: repeat(6, 1fr);
+  }
+}
